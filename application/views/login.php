@@ -1,106 +1,80 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<title>Login V6</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--===============================================================================================-->	
-	<link rel="icon" type="image/png" href="<?php echo base_url().'assets/images/icons/favicon.ico' ?>"/>
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url().'assets/vendor/bootstrap/css/bootstrap.min.css' ?>">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url(). 'assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css' ?>">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url(). 'assets/fonts/iconic/css/material-design-iconic-font.min.css' ?>">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url(). 'assets/vendor/animate/animate.css' ?>">
-<!--===============================================================================================-->	
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url(). 'assets/vendor/css-hamburgers/hamburgers.min.css' ?>">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url(). 'assets/vendor/animsition/css/animsition.min.css' ?>">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url(). 'assets/vendor/select2/select2.min.css' ?>">
-<!--===============================================================================================-->	
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url(). 'assets/vendor/daterangepicker/daterangepicker.css' ?>">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url(). 'assets/css/util.css' ?>">
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url(). 'assets/css/main.css' ?>">
-<!--===============================================================================================-->
-</head>
+	<?php 
+  $this->load->view('nav'); ?>
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/login.css">
+
+
 <body>
+	<main>
+		<!--Bar Menu Atas-->
+	<div class="container">
+		
+	<!--Forum pengisian username dan pass, untuk bisa mengakses ApoLine-->
 	
-	<div class="limiter">
-		<div class="container-login100">
-			<div class="wrap-login100 p-t-85 p-b-20">
-				<form class="login100-form validate-form">
-					<span class="login100-form-title p-b-70">
-						Welcome to ELMA
-					</span>
-					<span class="login100-form-avatar">
-						<img src="<?php echo base_url(). 'assets/images/logo 1.png' ?>" alt="AVATAR">
-					</span>
-
-					<div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate = "Enter username">
-						<input class="input100" type="text" name="username">
-						<span class="focus-input100" data-placeholder="Username"></span>
-					</div>
-
-					<div class="wrap-input100 validate-input m-b-50" data-validate="Enter password">
-						<input class="input100" type="password" name="pass">
-						<span class="focus-input100" data-placeholder="Password"></span>
-					</div>
-
-					<div class="container-login100-form-btn">
-						<button class="login100-form-btn">
-							Login
-						</button>
-					</div>
-
-					<ul class="login-more p-t-190">
-						<li class="m-b-8">
-							<span class="txt1">
-								Forgot
-							</span>
-
-							<a href="#" class="txt2">
-								Username / Password?
-							</a>
-						</li>
-
-						<li>
-							<span class="txt1">
-								Don’t have an account?
-							</span>
-
-							<a href="#" class="txt2">
-								Sign up
-							</a>
-						</li>
-					</ul>
-				</form>
-			</div>
-		</div>
-	</div>
-	
-
-	<div id="dropDownSelect1"></div>
-	
-<!--===============================================================================================-->
-	<script src="<?php echo base_url(). 'assets/vendor/jquery/jquery-3.2.1.min.js' ?>"></script>
-<!--===============================================================================================-->
-	<script src="<?php echo base_url(). 'assets/vendor/animsition/js/animsition.min.js' ?>"></script>
-<!--===============================================================================================-->
-	<script src="<?php echo base_url(). 'assets/vendor/bootstrap/js/popper.js' ?>"></script>
-	<script src="<?php echo base_url(). 'assets/vendor/bootstrap/js/bootstrap.min.js' ?>"></script>
-<!--===============================================================================================-->
-	<script src="<?php echo base_url(). 'assets/vendor/select2/select2.min.js' ?>"></script>
-<!--===============================================================================================-->
-	<script src="<?php echo base_url(). 'assets/vendor/daterangepicker/moment.min.js' ?>"></script>
-	<script src="<?php echo base_url(). 'assets/vendor/daterangepicker/daterangepicker.js' ?>"></script>
-<!--===============================================================================================-->
-	<script src="<?php echo base_url(). 'assets/vendor/countdowntime/countdowntime.js' ?>"></script>
-<!--===============================================================================================-->
-	<script src="<?php echo base_url(). 'assets/js/main.js' ?>"></script>
-
+	<div class="forum">
+    <div class="row">
+      <div class="col-md-5 mx-auto col-sm-5 col-xs-6 textform formlogin">
+        <h3 class="text-center" style="font-family: inherit; margin-bottom: 10%;">WELCOME TO ELMA</h3>
+        <?php 
+          echo form_open("C_Akun/check"); 
+        ?>
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input class="form-control" type="text" name="username" placeholder="Username" required/>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input class="form-control" type="password" name="password" placeholder="Password" />
+          </div>
+          <!--<p>
+            Tidak mempunyai Akun? 
+            <a href="<?php echo site_url('C_Akun/daftar_view')?> ">Daftar disini.</a>
+          </p>-->
+		  <a href="#" data-toggle="modal" data-target="#admin">Admin</a>
+          <button type="submit" class="btn btn-success btn-block">MASUK</button>
+        </form> 
+      </div>
+		
+		<div id="admin" class="modal fade" role="dialog">
+                        <!--                    echo kan php dari foreach di atas dengan objek nim ke dalam id edit-->
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"></button>
+                                    <h4 class="modal-title">Login Admin</h4>
+                                </div>
+                                <?php echo form_open("C_admin/check"); ?>
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        <label for="username">Username</label>
+            							<input class="form-control" type="text" name="username" placeholder="Username" required/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="password">Password</label>
+            							<input class="form-control" type="password" name="password" placeholder="Password" />
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                         			<input type="submit" data-dismiss="modal" class="btn btn-danger"  value="close">
+                                    <input type="submit" class="btn btn-danger" name="logadmin" value="Login">
+									
+                                </div>
+                                <?php echo form_close(); ?>
+                            </div>
+                        </div>
+                    </div>
+		
+      <div class="col-md-7 mx-auto col-sm-7 col-xs-12 text-center"  >
+        <p class="textform-1">ELMA merupakan salah satu Aplikasi yang bisa membantu mahasiswa Informatika Tel-U, untuk belajar dengan mudah dan praktis secara online.</p>
+        <img src="<?php echo base_url();?>gambar/otak.png" width="665" height="400" alt="">
+      </div>
+    </div>
+  </div>	 
+</div>
+</main>
 </body>
-</html>
+<?php 
+$this->load->view('footer'); 
+if($this->session->flashdata('message') == 'Gagal Login'){
+  echo "<script>alert('Username or Password is Incorrect.');</script>";
+}
+?>

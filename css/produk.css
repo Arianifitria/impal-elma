@@ -1,0 +1,92 @@
+body{
+	background-color: #162B3E;
+}
+
+.kotak{
+	border-radius: : 1px solid #000000;
+	height: 100%;
+	color: black;
+	box-shadow: 3px 3px 7px white;
+	margin: 50px 10px 10px 60px;
+	text-align: center;
+	background-color: white;
+}
+
+.griddd{
+	display: grid;
+	list-style-type: none;
+	background-color: transparent;
+	margin: 30px;padding: 10px ;
+	border-color: white;
+	grid-template-columns: repeat(2,auto);
+	grid-template-rows: repeat(1,auto);
+	/*text-align: center;*/
+
+}
+
+.kotak2{
+	height: 250px;
+	border: 3px solid white;
+	color: white;
+	background-color:#white;
+	border-radius: 10px;
+
+}
+
+.reg{
+	margin-top: 10%;
+}
+
+.kotak img{
+	width: 100%;
+	margin-top: 15%;
+}
+
+.kotak h3{
+	margin-top: 25%;
+	width : 100%
+
+}
+
+.label{
+	color: black;
+	padding-top: 10%;
+	font-size: 20px;
+	font-family: inherit;
+}
+
+.label_harga{
+	padding-top: 10px;
+}
+
+.btn-info {
+	margin: 20px 0 20px 0;
+	/*width: 40%;*/
+	background-color: black;
+	border-radius: 30px;
+
+}
+
+.btn-success{
+	margin: 40px 0 20px 0;
+	width: 40%;
+	border-radius: 30px;
+}
+	
+.page{
+	margin: 40px;
+}
+
+.kotak3{
+	border: 1px solid #000000;
+	height: 100%;
+	color: black;
+	box-shadow: 3px 3px 7px white;
+	margin: 50px 10px 10px 60px;
+	text-align: center;
+	background-color: white;
+}
+
+.kotak3 img{
+	margin-top: 10%;
+}

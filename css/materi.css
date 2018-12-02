@@ -1,0 +1,35 @@
+body{
+	background-color: #162B3E;
+}
+
+.griddd{
+	display: grid;
+	list-style-type: none;
+	background-color: transparent;
+	margin: 30px;padding: 10px ;
+	border-color: white;
+	grid-template-columns: repeat(2,auto);
+	grid-template-rows: repeat(1,auto);
+	/*text-align: center;*/
+
+}
+
+.kotak2{
+	height: 250px;
+	border: 3px solid white;
+	color: white;
+	background-color:#white;
+	border-radius: 10px;
+
+}
+
+.btnCP{
+			cursor: pointer;
+			background-color: #676767;
+			font-weight: bold;
+			text-align: center;
+			vertical-align: middle;
+			font-size: 11px;
+			border-radius: 45px;
+			/*margin-bottom: 2%;*/
+		}

@@ -1,0 +1,60 @@
+body{
+	background-color: #162B3E;
+}
+
+.reg2{
+	margin-bottom: 5%;
+}
+
+
+
+.griddd{
+	display: grid;
+	list-style-type: none;
+	background-color: transparent;
+	margin: 30px;padding: ;
+	border-color: grey;
+	grid-template-columns: repeat(3,auto);
+	grid-template-rows: repeat(1,auto);
+
+}
+
+.kotak2{
+	height: 300px;
+	border: 3px solid #FDF9F9;
+	color: white;
+	background-color:#1C1C1C;
+	border-radius: 10px;
+}
+
+.kotak2 img{
+	margin-top: 10px;
+	margin-right: 10px;
+	float: left;
+	height: 80%
+}
+
+.kotak2 p{
+	font-family: inherit;
+	font-size: 12px;
+}
+
+.kotak2 h4{
+	font-family:inherit;
+	margin-top: 10px;
+	margin-left: 100px;
+	font-size: 15px;
+}
+
+.element-scheme--light {
+
+    color: #535353;
+
+}
+.step-boxes-4 {
+
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+
+}
