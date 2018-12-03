@@ -11,6 +11,8 @@ class M_Materi extends CI_Model
     return $query->result();
   }
 
+  
+
   function updatee($data){  
       $tabel = 'member'; 
       $lolo = array (

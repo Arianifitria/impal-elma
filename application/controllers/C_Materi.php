@@ -4,6 +4,7 @@ class C_Materi extends CI_Controller {
 	public function __construct(){
 		parent::__construct();
 		$this->load->model('M_Materi');
+        $this->load->model('M_materi1');
 		$this->load->helper('url','form');
 	}
     public function index()
@@ -13,6 +14,24 @@ class C_Materi extends CI_Controller {
             'mmbr' => $this->M_Materi->get_data()
         );
         $this->load->view('materi',$data);
+    }
+    public function inde()
+    {
+        $data = array(
+            'title' => 'Data member',
+            'mmbr' => $this->M_Materi->get_data()
+        );
+        $this->load->view('materidosen',$data);
+    }
+    function index1(){
+        $data = array(
+            'title' => 'Data Mahasiswa',
+            'member' => $this->M_materi1->get_data()
+            ); 
+                 
+        $this->load->view('nav_login');
+        $this->load->view('materidosen', $data);         
+        $this->load->view('footer');
     }
     public function unggah(){
         $this->load->library('upload');
