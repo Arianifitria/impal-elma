@@ -6,7 +6,7 @@ body{
 	display: grid;
 	list-style-type: none;
 	background-color: transparent;
-	margin: 30px;padding: 10px ;
+	margin: 30px;padding: 5px ;
 	border-color: white;
 	grid-template-columns: repeat(2,auto);
 	grid-template-rows: repeat(1,auto);
