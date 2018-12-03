@@ -15,14 +15,6 @@ class C_Materi extends CI_Controller {
         );
         $this->load->view('materi',$data);
     }
-    public function inde()
-    {
-        $data = array(
-            'title' => 'Data member',
-            'mmbr' => $this->M_Materi->get_data()
-        );
-        $this->load->view('materidosen',$data);
-    }
     function index1(){
         $data = array(
             'title' => 'Data Mahasiswa',

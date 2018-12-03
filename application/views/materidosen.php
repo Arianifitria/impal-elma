@@ -1,4 +1,4 @@
-<?php $this->load->view('nav_login'); ?>
+<?php $this->load->view('nav_loginadmin'); ?>
 <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/materi.css">
 
 <body>
