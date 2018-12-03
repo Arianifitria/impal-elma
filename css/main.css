@@ -2574,6 +2574,7 @@
 			border: solid 1px;
 			border-left: 0;
 			border-right: 0;
+
 		}
 
 		table td {
@@ -2619,7 +2620,7 @@
 			}
 
 	table tbody tr {
-		border-color: #e5474b;
+		border-color: black;
 	}
 
 		table tbody tr:nth-child(2n + 1) {
@@ -2627,7 +2628,7 @@
 		}
 
 	table th {
-		color: #e5474b;
+		color: black;
 	}
 
 	table thead {

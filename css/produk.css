@@ -26,9 +26,9 @@ body{
 
 .kotak2{
 	height: 250px;
-	border: 3px solid white;
+	border: 3px solid black;
 	color: white;
-	background-color:#white;
+	background-color: white;
 	border-radius: 10px;
 
 }
