@@ -25,12 +25,12 @@ public function get_data1()
  	function updatee($data){  
   		$tabel = 'member'; 
       $lolo = array (
-            "username"=>$data['username'],
-            "password"=>$data['password'],
-            "nama"=>$data['nama'],
-            "email"=>$data['email'],
-            "alamat"=>$data['alamat'],
-            "foto"=>$data['foto']
+            'username'=>$data['username'],
+            'password'=>$data['password'],
+            'nama'=>$data['nama'],
+            'email'=>$data['email'],
+            'alamat'=>$data['alamat'],
+            'foto'=>$data['foto']
         );  
         $this->db->where('username', $data['username']);
         $update = $this->db->update($tabel,$lolo); 

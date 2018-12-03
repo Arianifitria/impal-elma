@@ -85,7 +85,6 @@ class C_PROFILE extends CI_Controller {
                    // );
                
                   $this->M_Profile->update_data($data,'admin');
-                  $this->session->set_userdata('username');
                   redirect('C_PROFILE/index1');
            }
 
@@ -143,7 +142,7 @@ class C_PROFILE extends CI_Controller {
           $file = $this->upload->data();
           //mengambil data di form
           $data = $file['file_name'];
-          $this->M_Profile->upload1($data); //memasukan data ke database
+          $this->M_Profile->upload($data); //memasukan data ke database
           redirect('C_PROFILE/index'); //mengalihkan halaman
 
       }

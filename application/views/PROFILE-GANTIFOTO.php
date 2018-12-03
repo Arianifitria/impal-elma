@@ -43,7 +43,7 @@
 					CHANGE YOUR PROFILE PICTURE
 				</center>
 			</h4>
-			<?=form_open_multipart('C_PROFILE/tambah')?>
+			<?=form_open_multipart('C_PROFILE/tambah1')?>
 				<div class="custom-file">
 	  				<input id="inputPicture" type="file" class="custom-file-input" id="customFile" name="foto" onchange="preview()">
 	  				<label class="custom-file-label" for="customFile">Choose file</label>

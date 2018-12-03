@@ -31,7 +31,7 @@
 		<!-- <!-- <!--  --> --> -->
 		<div class="right-profile col-md-6">
 			
-			<form method="POST" action="<?php echo base_url("C_PROFILE/editData"); ?>" enctype="multipart/form-data">
+			<form method="POST" action="<?php echo base_url("C_PROFILE/update1"); ?>" enctype="multipart/form-data">
 			<div class="form-group" style="margin-top: 2%;">
             	<label for="username">Username</label>
             	<input class="form-control" type="text" name="username" placeholder="Username" />
