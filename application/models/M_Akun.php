@@ -56,4 +56,18 @@ class M_Akun extends CI_Model
                 return FALSE;
             }
     }
+
+    public function check_user1($data)
+    {
+            $this->db->where('username', $data['username']);
+            $this->db->where('password', $data['password']);
+ 
+            $query = $this->db->get('admin');
+
+            if($query->num_rows()== 1) {
+                return $query->row(0);
+            } else {
+                return FALSE;
+            }
+    }
 }

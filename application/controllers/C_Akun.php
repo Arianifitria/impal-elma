@@ -46,6 +46,18 @@
         }
     }
 
+    public function checkadmin(){
+        $data = $this->input->post(null,TRUE);
+        $login_data = $this->M_Akun->check_user1($data);
+        if($login_data){
+            $this->session->set_userdata('username',$login_data->username);
+            redirect('C_Home/index1');
+        } else {
+            $this->session->set_flashdata('message','Gagal Login');
+            redirect('C_Akun/index');
+        }
+    }
+
     public function daftar_view()
     {
         $this->load->view('DAFTAR');

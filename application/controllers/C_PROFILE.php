@@ -9,16 +9,30 @@ class C_PROFILE extends CI_Controller {
     public function index()
     {
         $data = array(
-            'title' => 'Data member',
+            'title' => 'Data Mahasiswa',
             'mmbr' => $this->M_Profile->get_data()
         );
         $this->load->view('YOUR-PROFILE',$data);
+    } 
+
+    public function index1()
+    {
+        $data = array(
+            'title' => 'Data Dosen',
+            'adm' => $this->M_Profile->get_data1()
+        );
+        $this->load->view('profil-admin',$data);
     } 
 
     public function Profile()
     {
         $this->load->view('YOUR-PROFILE');
     }
+    public function Profileadmin()
+    {
+        $this->load->view('profil-admin');
+    }
+
 
     public function Ganti_Foto()
     {

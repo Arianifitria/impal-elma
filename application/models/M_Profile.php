@@ -10,6 +10,14 @@ class M_Profile extends CI_Model
 		return $query->result();
 	}
 
+public function get_data1()
+  {
+    $data = $this->session->userdata('username');
+    $this->db->where('username',$data);
+    $query = $this->db->get('admin');
+    return $query->result();
+  }
+
 	function edit_member($where,$table){  
   		return $this->db->get_where($table,$where);
  	}

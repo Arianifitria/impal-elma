@@ -25,12 +25,14 @@
             <label for="password">Password</label>
             <input class="form-control" type="password" name="password" placeholder="Password" />
           </div>
+           
           <!--<p>
             Tidak mempunyai Akun? 
             <a href="<?php echo site_url('C_Akun/daftar_view')?> ">Daftar disini.</a>
           </p>-->
 		  <a href="#" data-toggle="modal" data-target="#admin">Admin</a>
           <button type="submit" class="btn btn-success btn-block">MASUK</button>
+        <?php echo form_close(); ?>
         </form> 
       </div>
 		
@@ -38,6 +40,9 @@
                         <!--                    echo kan php dari foreach di atas dengan objek nim ke dalam id edit-->
                         <div class="modal-dialog">
                             <div class="modal-content">
+                              <?php 
+                                  echo form_open("C_Akun/checkadmin"); 
+                                ?>
                                 <div class="modal-header">
                                     <button type="button" class="close" data-dismiss="modal"></button>
                                     <h4 class="modal-title">Login Admin</h4>
@@ -58,8 +63,9 @@
                                     <input type="submit" class="btn btn-danger" name="logadmin" value="Login">
 									
                                 </div>
-                                <?php echo form_close(); ?>
+                                
                             </div>
+                            <?php echo form_close(); ?>
                         </div>
                     </div>
 		
