@@ -19,12 +19,12 @@
 			</ul>
 			<ul> 
 				<li class="nav-item" >
-					<a class="nav-link" style="color: white" href="<?php echo site_url('C_Profile/Ganti_Foto') ?>"><b>Change Picture <hr color="white"> </b></a>
+					<a class="nav-link" style="color: white" href="<?php echo site_url('C_Profile/Ganti_Foto1') ?>"><b>Change Picture <hr color="white"> </b></a>
 				</li>
 			</ul>
 			<ul>
 				<li class="nav-item">
-					<a class="nav-link" style="color: white" href="<?php echo site_url('C_Profile/Akun_Setting') ?>"><b>Account and Profile Setting <hr color="white"> </b></a>
+					<a class="nav-link" style="color: white" href="<?php echo site_url('C_Profile/Akun_Setting1') ?>"><b>Account and Profile Setting <hr color="white"> </b></a>
 				</li>
 			</ul>	
 		</div>
@@ -36,7 +36,7 @@
 			<table class="infoo">
 			
 			<center>
-			<!-- <img class="avatar mx-auto" src="<?php echo base_url()?>gambar/<?php echo $member->foto;?>"> -->
+			<img class="avatar mx-auto" src="<?php echo base_url()?>gambar/<?php echo $admin->foto;?>">
 			<p style="font-weight: bold; font-size: 16px;">Your Picture</p>
 			</center>
 			<tr>

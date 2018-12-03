@@ -43,7 +43,7 @@
               <a class="nav-link" href="<?php echo site_url('C_Produk/index')?>">Nilai & Presensi</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="<?php echo site_url('C_Materi/index')?>">Materi</a>
+              <a class="nav-link" href="<?php echo site_url('C_materi/index')?>">Materi</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="<?php echo site_url('C_Profile/index')?>">Profile</a>

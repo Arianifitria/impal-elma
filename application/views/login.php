@@ -30,7 +30,7 @@
             Tidak mempunyai Akun? 
             <a href="<?php echo site_url('C_Akun/daftar_view')?> ">Daftar disini.</a>
           </p>-->
-		  <a href="#" data-toggle="modal" data-target="#admin">Admin</a>
+		  <a href="#" data-toggle="modal" data-target="#admin" style="text-decoration: underline;">Login Untuk Dosen</a>
           <button type="submit" class="btn btn-success btn-block">MASUK</button>
         <?php echo form_close(); ?>
         </form> 

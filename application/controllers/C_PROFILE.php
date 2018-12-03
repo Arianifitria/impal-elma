@@ -38,9 +38,19 @@ class C_PROFILE extends CI_Controller {
     {
 		$this->load->view('PROFILE-GANTIFOTO');
     }
+
+    public function Ganti_Foto1()
+    {
+    $this->load->view('ganti_foto_Admin');
+    }
+
     public function Akun_Setting()
     {
         $this->load->view('PROFILE-PENGATURANPROFILE');
+    }
+    public function Akun_Setting1()
+    {
+        $this->load->view('pengProf_Admin');
     }
 
 
@@ -61,10 +71,62 @@ class C_PROFILE extends CI_Controller {
 
         }
     }
+              function editData(){
+                   $data = array(
+                        'username'=>$this->input->post ('username'),
+                        'password'=>$this->input->post ('password'),
+                        'nama'=>$this->input->post ('nama'),
+                        'nip'=>$this->input->post ('nip'),
+                        'email'=>$this->input->post ('email'),
+                        'alamat'=>$this->input->post ('alamat'),
+                        'foto'=>$this->input->post ('foto')                  );
+                   // $where = array(
+                   //    'username' => $username
+                   // );
+               
+                  $this->M_Profile->update_data($data,'admin');
+                  $this->session->set_userdata('username');
+                  redirect('C_PROFILE/index1');
+           }
+
+    public function update1() {
+        $data = $this->input->post(null,TRUE);
+        $edit = $this->M_Profile->updatee1($data);
+        if($edit){
+            $this->session->set_flashdata('alert', 'sukses_edit');
+            redirect('C_PROFILE/index1');
+        }else{
+            echo "<script>alert('Gagal Edit Data');</script>";
+
+        }
+    }
 
 
 
     public function tambah(){
+    $config = [
+        'upload_path' => './gambar',
+        'allowed_types' => 'gif|jpg|png',
+        'max_size' => 1000
+      ];
+      $this->load->library('upload', $config);
+      if (!$this->upload->do_upload('foto')) //jika gagal upload
+      {
+          $error = array('error' => $this->upload->display_errors()); //tampilkan error
+          $this->load->view('ganti_foto_Admin', $error);
+      } else
+      //jika berhasil upload
+      {
+          $file = $this->upload->data();
+          //mengambil data di form
+          $data = $file['file_name'];
+          $this->M_Profile->upload1($data); //memasukan data ke database
+          redirect('C_PROFILE/index1'); //mengalihkan halaman
+
+      }
+  }
+
+    public function tambah1(){
     $config = [
         'upload_path' => './gambar',
         'allowed_types' => 'gif|jpg|png',
@@ -81,7 +143,7 @@ class C_PROFILE extends CI_Controller {
           $file = $this->upload->data();
           //mengambil data di form
           $data = $file['file_name'];
-          $this->M_Profile->upload($data); //memasukan data ke database
+          $this->M_Profile->upload1($data); //memasukan data ke database
           redirect('C_PROFILE/index'); //mengalihkan halaman
 
       }

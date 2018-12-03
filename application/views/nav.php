@@ -32,7 +32,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
+          <!-- <ul class="navbar-nav ml-auto">
             <li class="nav-item">
               <a class="nav-link" href="<?php echo site_url('C_Akun/index')?>">Beranda
                 <span class="sr-only"></span>
@@ -47,7 +47,7 @@
             <li class="nav-item">
               <a class="nav-link" href="<?php echo site_url('C_Akun/index')?>">Profile</a>
             </li>
-          </ul>
+          </ul> -->
         </div>
       </div>
        <div class="btn-group ">
